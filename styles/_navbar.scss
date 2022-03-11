@@ -1,0 +1,99 @@
+@import "./colors";
+@import "./media-queries";
+%align-center{
+   display: flex;
+   align-items: center;
+}
+%all-btn{
+    color: $light;
+    background: $deepblue;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover{
+        transition:  0.3s ease;
+        background: $deepblue-h; 
+     }
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  height: 60px;
+  padding: 0.5rem calc((95.5vw - 1200px) / 2);
+  position: relative;
+
+  &-logo{
+      color:$blue;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 500;
+      @extend %align-center;
+  }
+
+  &-toggler{
+      opacity: 0;
+
+      @include tablet{
+          color:$blue;
+          opacity: 1;
+          position: absolute;
+          top: 22px;
+          right: 20px;
+          font-size: 2rem;
+
+      }
+  }
+
+  &-menu{
+      @extend %align-center;
+      list-style: none;
+      text-align: center;
+      margin-right: 24px;
+      text-decoration: none;
+     
+
+      @include tablet{
+          display: none;
+      }
+
+      &-a{
+           margin-right: 50px;
+           padding:8px;
+           color: $dark;
+            &:hover{
+              background: $light;
+             display: inline-flex;
+           }
+        }
+        &-b{
+            margin-right: 50px;
+            padding:8px;
+            color: $deepblue;
+            &:hover{
+                background:$lightblue;
+                display: inline-flex;
+            }
+        }
+
+      &-links{
+          @extend %align-center;
+          justify-content:center ;
+          text-decoration: none;
+          text-transform: capitalize;
+          line-height: 1.5;
+          font-weight: 500;
+          font-size: 15px;
+      }
+      #button{
+          @extend %all-btn;
+          padding: 8px 12px;
+          margin-left: 16px;
+         
+      }
+  }
+}

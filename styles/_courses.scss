@@ -1,0 +1,55 @@
+.recomend{
+    margin:80px 55px 0px;
+    &-heading{
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+    }
+    &-grid{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px; 
+    }
+    &-course{
+        border: 1px solid $grey;
+        width: 291px;
+        margin-top: 20px;
+        &-image{
+            width: 290px;
+            height: 250px;
+        }
+    &-text{
+        padding: 12px;
+        &-a{
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &-b{
+            font-size: 14.5px;
+            color: $deepgrey;
+            margin-bottom: 5px;
+            &-i{
+               font-weight: 500;
+            }
+        }
+        &-c{
+            font-size: 13px;
+            background: $grey;
+            display: inline-flex;
+            padding:8px;
+            margin-top: 5px;
+            
+        }
+    }
+    }
+    &-btn{
+         margin: 100px 0px 100px 0px;
+        &-last{
+            font-size: 16px;
+            display: grid;
+            margin: auto;
+
+        }
+    }
+}

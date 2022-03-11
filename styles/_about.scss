@@ -1,0 +1,32 @@
+.about{
+    background:linear-gradient($dark-bg, $dark-bg), url(../images/hero-img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 80vh;
+    color: $light;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+
+    &-content{
+       margin-left: 50px;
+       
+    }
+    &-heading{
+        font-size: 80px;
+        margin-bottom: 25px;
+    }
+    &-text{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+   
+}
+button{
+    @extend %all-btn;
+    padding: 12px 18px;
+    font-size: 18px;
+    letter-spacing: 1px;
+   
+}
