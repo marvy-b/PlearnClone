@@ -1,3 +1,4 @@
+@import "./media-queries";
 .about{
     background:linear-gradient($dark-bg, $dark-bg), url(../images/hero-img.jpg) no-repeat;
     background-size: cover;
@@ -7,19 +8,47 @@
     color: $light;
     flex-direction: column;
     justify-content: center;
-    height: auto;
-
+    @include tablet{
+        min-height: 60vh;
+    }
+    @include mobile{
+        background: none;
+    }
     &-content{
        margin-left: 50px;
-       
+       @include tablet{
+        margin-left: 24px;
+    }
+    @include mobile{
+        color: $dark;
+        text-align: center;
+        margin: 10px;
+        
+    }
     }
     &-heading{
         font-size: 80px;
         margin-bottom: 25px;
+        @include tablet{
+            font-size: 50px;
+            margin-top: 80px;
+            margin-bottom: 15px;
+        }
+        @include mobile{
+            font-size: 39px;
+            margin-top: -30px;
+            margin-bottom: 35px;
+        }
     }
     &-text{
         font-size: 24px;
         margin-bottom: 16px;
+        @include tablet{
+            font-size: 20px;
+        }
+        @include mobile{
+            font-size: 16px;
+        }
     }
    
 }
@@ -28,5 +57,8 @@ button{
     padding: 12px 18px;
     font-size: 18px;
     letter-spacing: 1px;
-   
+    @include mobile{
+        padding: 10px 175px;
+        font-size: 16px;
+    }
 }

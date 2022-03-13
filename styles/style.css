@@ -21,9 +21,10 @@ button:hover, .navbar-menu #button:hover {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: white;
+  background: #f7f7f7;
   height: 60px;
   padding: 0.5rem calc((95.5vw - 1200px) / 2);
+  z-index: 10;
   position: relative;
 }
 .navbar-logo {
@@ -32,15 +33,11 @@ button:hover, .navbar-menu #button:hover {
   text-decoration: none;
   font-size: 24px;
   font-weight: 500;
+  margin-left: 24px;
 }
-.navbar-toggler {
-  opacity: 0;
-}
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .navbar-toggler {
     color: #3377db;
-    opacity: 1;
-    position: absolute;
     top: 22px;
     right: 20px;
     font-size: 2rem;
@@ -52,7 +49,7 @@ button:hover, .navbar-menu #button:hover {
   margin-right: 24px;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   .navbar-menu {
     display: none;
   }
@@ -97,18 +94,63 @@ button:hover, .navbar-menu #button:hover {
   color: #f7f7f7;
   flex-direction: column;
   justify-content: center;
-  height: auto;
+}
+@media only screen and (max-width: 960px) {
+  .about {
+    min-height: 60vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    background: none;
+  }
 }
 .about-content {
   margin-left: 50px;
+}
+@media only screen and (max-width: 960px) {
+  .about-content {
+    margin-left: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-content {
+    color: #000000de;
+    text-align: center;
+    margin: 10px;
+  }
 }
 .about-heading {
   font-size: 80px;
   margin-bottom: 25px;
 }
+@media only screen and (max-width: 960px) {
+  .about-heading {
+    font-size: 50px;
+    margin-top: 80px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-heading {
+    font-size: 39px;
+    margin-top: -30px;
+    margin-bottom: 35px;
+  }
+}
 .about-text {
   font-size: 24px;
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 960px) {
+  .about-text {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-text {
+    font-size: 16px;
+  }
 }
 
 button {
@@ -116,28 +158,80 @@ button {
   font-size: 18px;
   letter-spacing: 1px;
 }
+@media only screen and (max-width: 768px) {
+  button {
+    padding: 10px 175px;
+    font-size: 16px;
+  }
+}
 
 .recomend {
   margin: 80px 55px 0px;
+}
+@media only screen and (max-width: 960px) {
+  .recomend {
+    margin: 50px 24px 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .recomend {
+    margin: 15px;
+  }
 }
 .recomend-heading {
   font-size: 40px;
   font-weight: 300;
   letter-spacing: 0.2rem;
 }
+@media only screen and (max-width: 960px) {
+  .recomend-heading {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .recomend-heading {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
 .recomend-grid {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media only screen and (max-width: 960px) {
+  .recomend-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .recomend-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .recomend-course {
   border: 1px solid #e0e0e0;
   width: 291px;
   margin-top: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .recomend-course {
+    width: 451px;
+  }
+}
 .recomend-course-image {
   width: 290px;
   height: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .recomend-course-image {
+    width: 450px;
+    height: 400px;
+  }
 }
 .recomend-course-text {
   padding: 12px;
@@ -169,6 +263,12 @@ button {
   font-size: 16px;
   display: grid;
   margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .recomend-btn-last {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
 }
 
 * {
