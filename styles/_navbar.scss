@@ -38,9 +38,13 @@
   }
 
   &-toggler{
+      opacity: 0;
+     
 
       @include tablet{
           color:$blue;
+          opacity: 1;
+          position: absolute;
           top: 22px;
           right: 20px;
           font-size: 2rem;

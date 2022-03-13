@@ -35,9 +35,14 @@ button:hover, .navbar-menu #button:hover {
   font-weight: 500;
   margin-left: 24px;
 }
+.navbar-toggler {
+  opacity: 0;
+}
 @media only screen and (max-width: 960px) {
   .navbar-toggler {
     color: #3377db;
+    opacity: 1;
+    position: absolute;
     top: 22px;
     right: 20px;
     font-size: 2rem;
