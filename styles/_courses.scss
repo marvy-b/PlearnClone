@@ -1,12 +1,9 @@
 @import "./media-queries";
 .recomend{
     margin:80px 55px 0px;
-       @include tablet{
-          margin:50px 24px 0px;
-        }
-        @include mobile{
-            margin: 15px;
-        }
+      @include tablet{
+          margin: 15px;
+      }
     &-heading{
         font-size: 40px;
         font-weight: 300;
@@ -39,17 +36,24 @@
         border: 1px solid $grey;
         width: 291px;
         margin-top: 20px;
-        @include mobile{
-              width: 451px;  
-        }
+        @include tablet{
+            width: 350px;  
+          }
+     /*   @include mobile{
+            width: 350px;  
+        }*/
 
         &-image{
             width: 290px;
             height: 250px;
-            @include mobile{
-                width: 450px;
-                height: 400px;
-            }
+            @include tablet{
+                width: 349px;
+                height: 300px;
+              }
+        /*    @include mobile{
+                width: 349px;
+                height: 300px;
+            }*/
         }
     &-text{
         padding: 12px;
